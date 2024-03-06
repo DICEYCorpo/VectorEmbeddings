@@ -20,7 +20,7 @@ embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small")
 
 directory = "./data/"
 
-#Load your CSB files
+#Load your CSV files
 
 csv_files = glob(os.path.join(directory, '*.csv'))
 
