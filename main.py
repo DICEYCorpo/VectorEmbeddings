@@ -1,7 +1,6 @@
 
 
 import os
-import csv
 from dotenv import load_dotenv
 from glob import glob
 from langchain_community.document_loaders import PyPDFDirectoryLoader
@@ -45,3 +44,5 @@ pdf = PDF_loader.load()
 chunks = text_splitter.split_documents(pdf)
 
 docsearchpdf = PineconeVectorStore.from_documents(chunks, embeddings_model, index_name="vectortest")
+
+print(docsearchpdf)
