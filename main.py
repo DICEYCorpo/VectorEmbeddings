@@ -16,7 +16,7 @@ pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small")
 
 
-
+# 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
 directory = "./data/"
 
 #Load your CSV files
@@ -25,7 +25,7 @@ csv_files = glob(os.path.join(directory, '*.csv'))
 
 # Initialize an empty list to store data from all CSV files
 all_data = []
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=20)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=20)
 
 # Iterate through each CSV file and load its data
 for file_path in csv_files:
